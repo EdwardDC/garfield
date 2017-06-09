@@ -1,0 +1,62 @@
+en:
+  store.hello: hello
+  store.world: world
+  store.success: Success
+  store.failure: Failure
+  store.mine: Mine
+  # 个人主页
+  store.leader: Leader
+  store.notice: News
+  store.task: Tasks
+  store.noble: Noble
+  store.recharge: Recharge
+  home.level: My Level
+  home.video: My Video
+  home.favorite: My Favorite
+  # 设置
+  settings: settings
+  settings.systemSettings: System Settings
+  settings.color: Color Settings
+  settings.locale: Language Settings
+  settings.locale.chose: Chose your Language
+  settings.locale.chinese: Chinese
+  settings.locale.english: English
+  settings.autoPlay: Auto Play
+  settings.otherSetting: Other Settings
+  settings.aboutUs: About Us
+  settings.feedback: Feedback
+  # 关于我们
+  aboutus: About Us
+  # 意见反馈
+  feedback: Feedback
+zh-CN:
+  store.hello: 您好
+  store.world: 世界
+  store.success: 成功
+  store.failure: 失败
+  store.mine: 我的
+  # 个人主页
+  store.leader: 领袖
+  store.notice: 消息
+  store.task: 我的任务
+  store.noble: 贵族
+  store.recharge: 充值
+  home.level: 我的等级
+  home.video: 我的视频
+  home.favorite: 我的收藏
+  # 设置
+  settings: 设置
+  settings.systemSettings: 系统设置
+  settings.color: 颜色设置
+  settings.locale: 语言设置
+  settings.locale.chose: 请选择语言
+  settings.locale.chinese: 中文
+  settings.locale.english: 英文
+  settings.autoPlay: 自动播放
+  settings.otherSetting: 其他设置
+  settings.aboutUs: 关于我们
+  settings.feedback: 意见反馈
+  # 关于我们
+  aboutus: 关于我们
+  # 意见反馈
+  feedback: 意见反馈

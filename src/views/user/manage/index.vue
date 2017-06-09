@@ -1,8 +1,8 @@
 <template lang="html">
-  <div class="pageone">
+  <div class="user-manage">
     <el-breadcrumb>
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>导航一</el-breadcrumb-item>
+      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
     </el-breadcrumb>
     <el-form class="queryform" ref="form" inline :model="form" :rules="rules" label-width="80px">
       <el-form-item label="活动名称" prop="name">
@@ -14,6 +14,7 @@
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit('form')">查询</el-button>
+        <el-button type="primary" @click="addUserHandle()">新增</el-button>
       </el-form-item>
     </el-form>
     <el-table class="table" :data="tableData" highlight-current-row
@@ -50,31 +51,35 @@
 
 <script>
 export default {
-  name: 'pageone',
+  name: 'userManage',
   data () {
     return {
       currentPage: 1,
       currentRow: null,
       tableData: [
         {
+          id: 1,
           date: '2016-05-02',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄',
           zipcode: 1000
         },
         {
+          id: 2,
           date: '2016-05-04',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1517 弄',
           zipcode: 2000
         },
         {
+          id: 3,
           date: '2016-05-01',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1519 弄',
           zipcode: 3000
         },
         {
+          id: 4,
           date: '2016-05-03',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1516 弄',
@@ -100,6 +105,9 @@ export default {
     }
   },
   methods: {
+    addUserHandle () {
+      this.$router.push({name: 'userModify'})
+    },
     handleCurrentChange (val) {
       this.currentRow = val
     },
@@ -110,7 +118,9 @@ export default {
       this.currentPage = val
       console.log(`当前页: ${val}`)
     },
-    handleEdit () {},
+    handleEdit (index, row) {
+      this.$router.push({name: 'userModify', params: {userId: row.id}})
+    },
     handleDelete () {},
     onSubmit (formName) {
       this.$refs[formName].validate(valid => {
@@ -132,7 +142,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-.pageone {}
-</style>

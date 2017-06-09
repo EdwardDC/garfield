@@ -1,14 +1,17 @@
 <template lang="html">
   <div class="sidebar">
-    <el-menu default-active="2" @open="handleOpen" @close="handleClose" router>
-      <el-menu-item index="pageone">
+    <el-menu :default-active="activeRoute" @open="handleOpen" @close="handleClose" router>
+      <el-menu-item index="userManage">
         <i class="fa fa-user"></i> 用户管理
       </el-menu-item>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i> 导航二
+      <el-menu-item index="rightsManage">
+        <i class="el-icon-menu"></i> 权限管理
       </el-menu-item>
-      <el-menu-item index="3">
-        <i class="el-icon-setting"></i> 导航三
+      <el-menu-item index="orderManage">
+        <i class="el-icon-setting"></i> 订单管理
+      </el-menu-item>
+      <el-menu-item index="orderManage1">
+        <i class="el-icon-setting"></i> 订单管理
       </el-menu-item>
     </el-menu>
   </div>
@@ -19,7 +22,7 @@ export default {
   name: 'sidebar',
   data () {
     return {
-      active: 1
+      activeRoute: ''
     }
   },
   methods: {
@@ -28,6 +31,13 @@ export default {
     },
     handleClose (key, keyPath) {
       console.log(key, keyPath)
+    }
+  },
+  watch: {
+    '$route' ({name}) {
+      if (name) {
+        this.activeRoute = name
+      }
     }
   }
 }

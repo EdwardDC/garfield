@@ -1,5 +1,5 @@
 {
-  "name": "atree",
+  "name": "garfield",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "edward <lw5853103@163.com>",
@@ -19,7 +19,6 @@
     "promise-polyfill": "^6.0.2",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1",
-    "vue-slick": "^1.1.5",
     "vuex": "^2.3.1",
     "vuex-router-sync": "^4.1.2",
     "whatwg-fetch": "^2.0.3"
